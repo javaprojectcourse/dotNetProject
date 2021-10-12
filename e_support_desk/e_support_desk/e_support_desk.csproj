@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6F629995-21CD-4B38-996A-D70FF7C5B349}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>e_support_desk</RootNamespace>
+    <AssemblyName>e_support_desk</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Mail">
+      <HintPath>..\Mail\Redistributables\net48\Mail.dll</HintPath>
+    </Reference>
+    <Reference Include="S22.Imap">
+      <HintPath>..\S22.Imap\S22.Imap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ceshtje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ceshtje.Designer.cs">
+      <DependentUpon>Ceshtje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dokumenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dokumenta.Designer.cs">
+      <DependentUpon>Dokumenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="e_supportDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>e_supportDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Faturim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Faturim.Designer.cs">
+      <DependentUpon>Faturim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Klasa\GjeneruesPDF.cs" />
+    <Compile Include="Klasa\Klient.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Klasa\Mailer.cs" />
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\New Perdorues.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\New Perdorues.Designer.cs">
+      <DependentUpon>New Perdorues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\New_Ceshtje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\New_Ceshtje.Designer.cs">
+      <DependentUpon>New_Ceshtje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\New_Klient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\New_Klient.Designer.cs">
+      <DependentUpon>New_Klient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\New_Pajisje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\New_Pajisje.Designer.cs">
+      <DependentUpon>New_Pajisje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinForms\New_Sherbim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinForms\New_Sherbim.Designer.cs">
+      <DependentUpon>New_Sherbim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Klasa\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Ceshtje.resx">
+      <DependentUpon>Ceshtje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dokumenta.resx">
+      <DependentUpon>Dokumenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Faturim.resx">
+      <DependentUpon>Faturim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\New Perdorues.resx">
+      <DependentUpon>New Perdorues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\New_Ceshtje.resx">
+      <DependentUpon>New_Ceshtje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\New_Klient.resx">
+      <DependentUpon>New_Klient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\New_Pajisje.resx">
+      <DependentUpon>New_Pajisje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinForms\New_Sherbim.resx">
+      <DependentUpon>New_Sherbim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="e_supportDataSet.xsc">
+      <DependentUpon>e_supportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="e_supportDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>e_supportDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="e_supportDataSet.xss">
+      <DependentUpon>e_supportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Config\packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Config\App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
